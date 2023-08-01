@@ -8,7 +8,6 @@ async function getCategories() {
 export default async function Home() {
   const categories = await getCategories();
 
-  console.log(categories, "f");
   return (
     <main>
       <Navbar />

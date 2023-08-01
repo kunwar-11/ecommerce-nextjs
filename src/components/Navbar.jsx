@@ -6,9 +6,11 @@ export function Navbar() {
     <>
       <nav className="hidden sm:flex w-full sm:items-center sm:justify-between p-4 bg-black px-8 fixed top-0 left-0 z-20">
         <div>
-          <h1 className="text-2xl bolder text-white ">
-            Sport<span className="text-parrotGreen text-4xl">X</span>
-          </h1>
+          <Link href="/">
+            <h1 className="text-2xl bolder text-white ">
+              Sport<span className="text-parrotGreen text-4xl">X</span>
+            </h1>
+          </Link>
         </div>
         <SearchBar />
         <div>
