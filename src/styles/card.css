@@ -1,0 +1,10 @@
+.textcontent {
+  z-index: 10;
+  bottom: 0;
+  transform: translateY(70%);
+  transition: 0.3s;
+}
+
+.category-card:hover .textcontent {
+  transform: translateY(0%);
+}
