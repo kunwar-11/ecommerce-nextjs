@@ -33,7 +33,7 @@ export default async function Categories({ params, searchParams }) {
         <div className="my-[130px] sm:ml-[300px] sm:my-[110px] flex flex-wrap justify-center sm:justify-start items-center sm:gap-16">
           {products.length ? (
             products.map((product) => (
-              <ProductCard product={product} key={product.id}>
+              <ProductCard product={product} key={product._id}>
                 <ProductCardHeader product={product} />
               </ProductCard>
             ))

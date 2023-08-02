@@ -66,10 +66,12 @@ export function FilterAndSortSidebar() {
       }, {});
     setPriceRange((prev) =>
       prev.map((each) =>
-        priceRangeObj[each.name] ? { ...each, selected: true } : each
+        priceRangeObj[each.name]
+          ? { ...each, selected: true }
+          : { ...each, selected: false }
       )
     );
-  }, []);
+  }, [searchParams]);
 
   function ratingSelectHandler(e) {
     setRatings(e.target.value);

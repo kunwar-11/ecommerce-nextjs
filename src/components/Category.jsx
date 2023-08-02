@@ -12,7 +12,7 @@ export function Category({ categories: { categories } }) {
       </h2>
       <div className="flex gap-4 items-center justify-around sm:justify-between flex-wrap mt-6 mx-8">
         {categories.map((category) => (
-          <Card category={category} key={category.id} />
+          <Card category={category} key={category._id} />
         ))}
       </div>
     </div>
