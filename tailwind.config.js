@@ -20,6 +20,7 @@ module.exports = {
       black: "#121212",
       parrotGreen: "#97fb57",
       gray: "#909090",
+      red: "#FF0000",
       // saffron: "#EEC643",
     },
   },

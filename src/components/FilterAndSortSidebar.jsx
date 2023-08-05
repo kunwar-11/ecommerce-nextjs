@@ -73,6 +73,7 @@ export function FilterAndSortSidebar() {
     );
   }, [searchParams]);
 
+
   function ratingSelectHandler(e) {
     setRatings(e.target.value);
     const current = new URLSearchParams(Array.from(searchParams.entries())); // -> has to use this form
