@@ -9,7 +9,7 @@ const cartSchema = new mongoose.Schema({
     {
       pid: { type: mongoose.Schema.ObjectId, ref: "Product" },
       qty: Number,
-      size: String | Number,
+      size: String,
     },
   ],
 });

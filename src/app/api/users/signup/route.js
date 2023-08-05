@@ -2,6 +2,8 @@ import { connect } from "../../../../dbConfig/dbConfig";
 import { NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
 import User from "../../../../models/userModel";
+import Cart from "../../../../models/cartModel";
+import Wishlist from "../../../../models/wishlistModel";
 
 connect();
 
@@ -33,8 +35,19 @@ export async function POST(request) {
 
     const savedUser = await newUser.save();
 
-    delete savedUser.password;
-    console.log(savedUser);
+    const newCart = new Cart({
+      _id: savedUser._id,
+      items: [],
+    });
+
+    await newCart.save();
+
+    const newWishlist = new Wishlist({
+      _id: savedUser._id,
+      items: [],
+    });
+
+    await newWishlist.save();
 
     return NextResponse.json(
       {
